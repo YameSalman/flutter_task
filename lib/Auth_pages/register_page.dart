@@ -204,7 +204,7 @@ class RegisterPage extends HookWidget {
                             ),
                             child: Text(
                               'التسجيل',
-                              style: whiteText, // Set the text color to white
+                              style: whiteBold16, // Set the text color to white
                             ),
                           ),
                         ),

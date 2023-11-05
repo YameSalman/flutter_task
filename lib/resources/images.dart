@@ -5,4 +5,5 @@ class Images {
   static const String registerImage = '$path/register.png';
   static const String categoryImage = '$path/category.jpg';
   static const String removeImage = '$path/remove.svg';
+  static const String cartImage = '$path/pay.svg';
 }

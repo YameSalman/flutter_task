@@ -4,6 +4,7 @@ import 'package:flutter_task/resources/images.dart';
 
 import '../Styles/colors_style.dart';
 import '../Styles/text_style.dart';
+import '../Widgets/cart_card.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class CartPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 height: 50,
@@ -74,150 +76,134 @@ class CartPage extends StatelessWidget {
               const SizedBox(
                 height: 12,
               ),
-              Expanded(
-                  child: ListView.builder(
-                itemCount: 2,
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 152,
-                    margin: const EdgeInsets.only(bottom: 16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6), // Adjust the radius as needed
-                      color: white,
-                    ),
+              const CartCard(),
+              Stack(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SvgPicture.asset(
+                        Images.cartImage,
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          height: 111,
-                          child: Row(
-                            children: [
-                              ClipRRect(
-                                borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(6), // Adjust the radius as needed
-                                ),
-                                child: Image.asset(
-                                  Images.categoryImage,
-                                  width: 123,
-                                  height: 111,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 8,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 9),
-                                    width: 188,
-                                    child: Text(
-                                      'عطر برائحة القرنفل والسدر الجبلي مناسب للسهرات والهدايا مغلف في زجاجة مرصعة بالذهب',
-                                      textAlign: TextAlign.start,
-                                      style: blackMedium12,
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(bottom: 14),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          '199.00',
-                                          style: blueBold14,
-                                        ),
-                                        Text(
-                                          'ج.م',
-                                          style: blueBold12,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'هل تمتلك كوبون للخصم ؟',
+                            style: whiteBold16,
                           ),
                         ),
-                        Divider(height: 1, color: normalBlack),
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Row(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  width: 38,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                    color: blueLogin,
-                                    borderRadius: const BorderRadius.only(bottomRight: Radius.circular(6)),
-                                  ),
-                                  child: const Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.white,
-                                      size: 24, // You can adjust the icon size as needed
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 47,
-                                  height: 38,
-                                  child: Center(
-                                    child: Text(
-                                      '350',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 38,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                    color: blueLogin,
-                                  ),
-                                  child: const Center(
-                                    child: Icon(
-                                      Icons.remove,
-                                      color: Colors.white,
-                                      size: 24, // You can adjust the icon size as needed
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            ElevatedButton(
+                              onPressed: () {
+                                // Handle button 1 click
+                              },
+                              child: Text('أدخل رقم الكوبون'),
                             ),
-                            SizedBox(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '69,650',
-                                    style: blackMedium16,
-                                  ),
-                                  Text(''),
-                                ],
-                              ),
-                            ),
-                            ClipRRect(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(6),
-                              ),
-                              child: Container(
-                                width: 38,
-                                height: 38,
-                                color: Colors.orange,
-                                child: SvgPicture.asset(
-                                  Images.removeImage, // Replace with the URL of your SVG image
-                                  width: 7,
-                                  height: 7,
-                                ),
-                              ),
+                            SizedBox(width: 16), // Adjust the space between buttons
+                            ElevatedButton(
+                              onPressed: () {
+                                // Handle button 2 click
+                              },
+                              child: Text('تطبيق'),
                             ),
                           ],
                         ),
                       ],
                     ),
-                  );
-                },
-              )),
+                  )
+                ],
+              ),
+              Container(
+                height: 122,
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6), // Adjust the radius as needed
+                  color: white,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'الإجمالي',
+                          style: blueBold14,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '70,048',
+                              style: blackMedium14,
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Text(
+                              'ج.م',
+                              style: blackMedium12,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'الضرائب',
+                          style: blueBold14,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '5.00',
+                              style: blackMedium14,
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Text(
+                              'ج.م',
+                              style: blackMedium12,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      color: normalBlack,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Add your button action here
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: blueLogin, // Set the background color
+                            ),
+                            child: Text('إتمام الشراء', style: whiteBold16),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

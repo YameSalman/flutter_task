@@ -44,7 +44,7 @@ TextStyle orangeBoldUnderLine = TextStyle(
   fontFamilyFallback: const ['Tajawal-Bold'], // #FF8E42
 );
 
-TextStyle whiteText = TextStyle(
+TextStyle whiteBold16 = TextStyle(
   fontWeight: FontWeight.w800,
   fontSize: 16,
   color: white,

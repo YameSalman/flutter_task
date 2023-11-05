@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_task/App_pages/cart_page.dart';
-import 'package:flutter_task/Auth_pages/register_page.dart';
 import 'package:flutter_task/resources/images.dart';
 
 import '../Styles/colors_style.dart';
@@ -113,7 +112,7 @@ class LoginPage extends HookWidget {
                             ),
                             child: Text(
                               'الدخول',
-                              style: whiteText, // Set the text color to white
+                              style: whiteBold16, // Set the text color to white
                             ),
                           ),
                         ),
