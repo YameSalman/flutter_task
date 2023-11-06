@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'App_pages/cart_page.dart';
+import 'App_pages/item_page.dart';
 import 'Auth_pages/login_page.dart';
 import 'Auth_pages/register_page.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CartPage(),
+      home: ItemPage(),
       debugShowCheckedModeBanner: false,
     );
   }
