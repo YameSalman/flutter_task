@@ -67,7 +67,7 @@ class CartCard extends HookWidget {
                                   ),
                                   Text(
                                     'ج.م',
-                                    style: blueBold12,
+                                    style: blueMedium12,
                                   ),
                                 ],
                               ),

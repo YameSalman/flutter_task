@@ -26,6 +26,14 @@ TextStyle blackMedium16 = TextStyle(
   fontFamilyFallback: const ['Tajawal-Medium'],
   // #FF8E42
 );
+TextStyle blackBold14 = TextStyle(
+  fontWeight: FontWeight.w800,
+  fontSize: 14,
+  color: black1,
+  fontFamily: 'Tajawal',
+  fontFamilyFallback: const ['Tajawal-Medium'],
+  // #FF8E42
+);
 
 TextStyle orangeBold = TextStyle(
   fontWeight: FontWeight.w800,
@@ -66,7 +74,7 @@ TextStyle blueBold14 = TextStyle(
   fontFamilyFallback: const ['Tajawal-Bold'],
   // #FF8E42
 );
-TextStyle blueBold12 = TextStyle(
+TextStyle blueMedium12 = TextStyle(
   fontWeight: FontWeight.w800,
   fontSize: 12,
   color: blueLogin,

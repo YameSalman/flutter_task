@@ -45,7 +45,7 @@ class ItemPage extends HookWidget {
                           },
                           icon: Icon(
                             favourite.value ? Icons.favorite : Icons.favorite_border,
-                            color: orange,
+                            color: favourite.value ? orange : Colors.grey,
                           ));
                     })
                   ],
@@ -74,7 +74,7 @@ class ItemPage extends HookWidget {
                     ),
                     Text(
                       'ج.م',
-                      style: blueBold12,
+                      style: blueMedium12,
                     ),
                   ],
                 ),
