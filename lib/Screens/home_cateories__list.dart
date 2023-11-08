@@ -16,9 +16,16 @@ class HomeCateoriesList extends StatelessWidget {
       itemCount: list.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, i) {
-        return HomeCateories(
-          image: list[i]['image'],
-          name: list[i]['name'],
+        return Row(
+          children: [
+            const SizedBox(
+              width: 16,
+            ),
+            HomeCateories(
+              image: list[i]['image'],
+              name: list[i]['name'],
+            ),
+          ],
         );
       },
       separatorBuilder: (context, index) {

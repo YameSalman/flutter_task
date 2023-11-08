@@ -111,19 +111,28 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 18,
             ),
-            SizedBox(
-              height: 100,
-              child: HomeCateoriesList(
-                list: list,
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: SizedBox(
+                height: 100,
+                child: HomeCateoriesList(
+                  list: list,
+                ),
               ),
             ),
-            HomeItemsList(
-              list: list2,
-              title: 'وصل حديثا',
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: HomeItemsList(
+                list: list2,
+                title: 'وصل حديثا',
+              ),
             ),
-            HomeItemsList(
-              list: list2,
-              title: 'الأكثر شعبية',
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: HomeItemsList(
+                list: list2,
+                title: 'الأكثر شعبية',
+              ),
             )
           ],
         ),
